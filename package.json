@@ -1,0 +1,22 @@
+{
+  "name": "notion-medium-blog",
+  "version": "1.0.0",
+  "description": "NodeJS Integration for Notion",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ak2403/Notion-Medium-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ak2403/Notion-Medium-Blog/issues"
+  },
+  "homepage": "https://github.com/ak2403/Notion-Medium-Blog#readme",
+  "devDependencies": {
+    "@notionhq/client": "^0.1.3"
+  }
+}
