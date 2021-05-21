@@ -11,8 +11,29 @@ const retriveDB = async (id) => {
   return fetchData;
 }
 
-(async () => {
+const addToDB = async (id, num = 0) => {
+  const insertionStatus = await Notion.request({
+    path: 'pages',
+    method: "POST",
+    body: {
+      "parent": { "database_id": id },
+      "properties": {
+        "Name": [{ 
+          "text": { 
+            "content": `Insertion data ${num}`,
+          } 
+        }],
+      }
+    }
+  })
+  
+  return true;
+}
 
+(async () => {
   const fetchDBList = await retriveDB(NotionDB);
 
+  for(const num of [1, 2, 3]) {
+    await addToDB(NotionDB, num)
+  }
 })();
